@@ -8,30 +8,34 @@
 import sys
 import getopt
 
-# --help function
-def usage():
-    print "Quit being a faggot"
-
-def main(argv):
+# This function checks for flags/arguments that have been passed via command line
+def flarg(argv):
     count = 0 # Number of colors to use
     try:
         opts, args = getopt.getopt(argv, "hc", ["help", "count="])
 
-# Flag/argument error handling
+    # Flag/argument error handling
     except getopt.GetoptError:
         print "You have specified an incorrect flag/value!"
         usage()
         sys.exit(2)
 
-# Check for flags.  If flags aren't present, count remains at 0
+    # Check for flags.  If flags aren't present, count remains at 0
     for opt, arg in opts:
         if opt in ("-h", "--help"):
             usage()
             sys.exit()
         elif opt in ("-c", "--count"):
             count = arg
-        source = "".join(args)
-        print count
+    source = "".join(args)
+    print count
+
+# --help function
+def usage():
+    print "Quit being a faggot"
+
+def main():
+    flarg(sys.argv[1:]) # removes sys.argv[0] (Script name) since that's garbage
 
 if __name__ == "__main__":
-    main(sys.argv[1:]) # removes sys.argv[0] (Script name) since that's garbage
+    main()
