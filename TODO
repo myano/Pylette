@@ -1,0 +1,7 @@
+*********************
+* Pylette TODO list *
+*********************
+NOTE: Pylette was originally written in c++ (known as c++olor/palettool).
+
+v0.1:
+	*Rewrite c++olor/palettool in Python
