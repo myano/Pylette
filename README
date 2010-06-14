@@ -3,7 +3,7 @@
 ****************
 
 ABOUT:
-Pylette is a tool, written in Python, that's purpose is to generate a 256 color palette for use with GraphicsGale.  You will supply Pylette with a color (in RGB format RRR GGG BBB) and it will generate 15 additional shades of the color depending on how dark/light the given color is.
+Pylette is a tool, written in Python, to generate a 256 color palette for use with GraphicsGale.  You will supply Pylette with a color (in RGB format RRR GGG BBB) and it will generate 15 additional shades of the color depending on how dark/light the given color is.
 
 REQUIREMENTS:
 Pylette requires Python 2.6.x
