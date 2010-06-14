@@ -13,4 +13,4 @@ To generate 16 shades of a single color:
 	pylette.py RRR GGG BBB
 
 To generate 16 shades of multiple colors:
-	pylette.py -c 16
+	pylette.py --count 16
