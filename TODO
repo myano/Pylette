@@ -3,5 +3,10 @@
 *********************
 NOTE: Pylette was originally written in c++ (known as c++olor/palettool).
 
+v0.2:
+	*Fix bug causing -c flag to not work
+	*Add support for multiple color generation (via -c/--count flag)
+	*Skip some version numbers to make this v1.0
+
 v0.1:
-	*Rewrite c++olor/palettool in Python
+	*Rewrite c++olor/palettool in Python - DONE
