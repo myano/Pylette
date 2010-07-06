@@ -5,8 +5,7 @@
 #
 # Visit http://github.com/nchowning/Pylette for more information
 
-import sys
-import getopt
+import sys, getopt
 
 # This function checks for flags/arguments that have been passed via command line
 # If no flags were passed, it assigns three arguments to rgb[]
