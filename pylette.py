@@ -10,6 +10,13 @@ import sys, getopt
 
 # This function checks for flags/arguments that have been passed via command line
 # If no flags were passed, it assigns three arguments to rgb[]
+
+def pyver():
+   if sys.version_info < (2, 6):
+      error = 'Error: Requires Python 2.6 or later, from www.python.org'
+      print >> sys.stderr, error
+      sys.exit(1)
+
 def flarg(argv, rgb):
     count = 0 # Number of colors to use
     try:
@@ -133,6 +140,8 @@ def shades(rgb):
 
 
 def main():
+    pyver() # Check the version of python that is running the script
+
     rgb = [0, 0, 0] # Creates the rgb array in the main function's scope
 
     count = flarg(sys.argv[1:], rgb) # Assigns a value to count from the flarg function
