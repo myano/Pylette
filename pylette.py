@@ -1,23 +1,29 @@
 #!/usr/bin/python
+"""
 # Pylette
 # Version 0.1
 #
 # Written by: Nathan Chowning
 #
 # Visit http://github.com/nchowning/Pylette for more information
+"""
 
 import sys, getopt
 
-# This function checks for flags/arguments that have been passed via command line
-# If no flags were passed, it assigns three arguments to rgb[]
-
 def pyver():
-   if sys.version_info < (2, 6):
-      error = 'Error: Requires Python 2.6 or later, from www.python.org'
-      print >> sys.stderr, error
-      sys.exit(1)
+    """
+    Checks the version of python. Results in an error if anything before 2.6.x
+    """
+    if sys.version_info < (2, 6):
+        error = 'Error: Requires Python 2.6 or later, from www.python.org'
+        print >> sys.stderr, error
+        sys.exit(1)
 
 def flarg(argv, rgb):
+    """
+    This function checks for flags/arguments that have been passed via the
+    command line. If no flags were passed, it assigns three argument to rgb[]
+    """
     count = 0 # Number of colors to use
     try:
         opts, args = getopt.getopt(argv, "hc", ["help", "count="])
@@ -54,8 +60,10 @@ def flarg(argv, rgb):
 
     return count
 
-# --help function
 def usage():
+    """
+    Help function
+    """
     print "****************"
     print "* Pylette Help *"
     print "****************\n"
@@ -64,9 +72,12 @@ def usage():
     print "To generate 16 shades of multiple colors:"
     print "\tpylette.py --count 16\n"
 
-# Shade creation function.  This function takes the shade given to it (in RRR GGG BBB format) and
-# generates 15 additional shades based on how light/dark the given color is
 def shades(rgb):
+    """
+    Shade creation function. This function takes the shade given to it (in RRR
+    GGG BBB format) and generates 15 additional shades based on how light/dark
+    the given color is.
+    """
     valmin = 0 # General minimum value
     valmax = 255 # General maximum value
 
@@ -140,6 +151,9 @@ def shades(rgb):
 
 
 def main():
+    """
+    Main execution function
+    """
     pyver() # Check the version of python that is running the script
 
     rgb = [0, 0, 0] # Creates the rgb array in the main function's scope
