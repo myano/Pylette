@@ -67,9 +67,9 @@ def shades(rgb):
 
     # This part is dumb and I need to come up with a better way of doing this.
     # My equations require arrays of a predetermined size (since this was written in c++ originally)
-    redar = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    greenar = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    bluear = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    redar = [0] * 16
+    greenar = [0] * 16
+    bluear = [0] * 16
 
     starter = 14 - (((valmax - divav) / 16) - 1) # Used to determine starting shade number
 
